@@ -33,11 +33,11 @@
 	},
 	"sources": {
 		"learning/Solidity Smart Contract Development/Storage Factory/SimpleStorage.sol": {
-			"keccak256": "0x9c24b1a702947f0c5c0aef14e1b1e14a708a3358ece3522b9bca9dcafd36203e",
+			"keccak256": "0x2f56d9439be7b8b3fe7d2b3a06fe9a5e6525eb5411b93fb1d2a707c44d128773",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://206626798f13ef63c915619bb82edd8262f182c68a8f67225885804d2f62d379",
-				"dweb:/ipfs/QmXDQV36R2sriusr8hjBCvsXUXNJTHM6G8369wwcQwaKQf"
+				"bzz-raw://d6d15d72e724f2979292651804334a09c0ca7f842caf3bf2c923a8664174cffc",
+				"dweb:/ipfs/Qma3NDARgkhNVR37sX2rp28jRh9cWTpxxeJsUukX7LwEut"
 			]
 		}
 	},

@@ -27,3 +27,6 @@ contract SimpleStorage{
 
 }
 
+contract SimpleStorage2{}
+contract SimpleStorage3{}
+contract SimpleStorage4{}

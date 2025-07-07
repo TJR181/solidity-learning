@@ -39,7 +39,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"learning/Solidity Smart Contract Development/Storage Factory/StorageFactory.sol": "StorageFactory"
+			"learning/Solidity Smart Contract Development/Storage Factory/StorageFactoryImport.sol": "StorageFactory"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -53,12 +53,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"learning/Solidity Smart Contract Development/Storage Factory/StorageFactory.sol": {
-			"keccak256": "0xefb591960616b9512f329161424321dc1fbcc6b9727d56aa55ecaa05fc5d98d7",
+		"learning/Solidity Smart Contract Development/Storage Factory/SimpleStorage.sol": {
+			"keccak256": "0x2f56d9439be7b8b3fe7d2b3a06fe9a5e6525eb5411b93fb1d2a707c44d128773",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e4d627ebb69d176124b608083dd802651b53384acd50cc9f8c11cf4d63021935",
-				"dweb:/ipfs/QmVg5JDHZPBdcVKMYpjcpf5EEt4F9hNrSi69srfkqTPiDF"
+				"bzz-raw://d6d15d72e724f2979292651804334a09c0ca7f842caf3bf2c923a8664174cffc",
+				"dweb:/ipfs/Qma3NDARgkhNVR37sX2rp28jRh9cWTpxxeJsUukX7LwEut"
+			]
+		},
+		"learning/Solidity Smart Contract Development/Storage Factory/StorageFactoryImport.sol": {
+			"keccak256": "0x90aeffb113e635bca4f087f5ceea2afb2cade89bfe82522b20fcaea37207d27e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1661ffc1fbba235174064d6ed172663a63df38591b0b47c85e564c64cc4da1f0",
+				"dweb:/ipfs/QmbhxHi61avZ7sMx1SS14e9hfz7829dnmhUoGrKCBUrX6D"
 			]
 		}
 	},

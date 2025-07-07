@@ -82,7 +82,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"learning/Solidity Smart Contract Development/Storage Factory/StorageFactory.sol": "SimpleStorage"
+			"learning/Solidity Smart Contract Development/Storage Factory/SimpleStorage.sol": "SimpleStorage"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -96,12 +96,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"learning/Solidity Smart Contract Development/Storage Factory/StorageFactory.sol": {
-			"keccak256": "0xefb591960616b9512f329161424321dc1fbcc6b9727d56aa55ecaa05fc5d98d7",
+		"learning/Solidity Smart Contract Development/Storage Factory/SimpleStorage.sol": {
+			"keccak256": "0x2f56d9439be7b8b3fe7d2b3a06fe9a5e6525eb5411b93fb1d2a707c44d128773",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e4d627ebb69d176124b608083dd802651b53384acd50cc9f8c11cf4d63021935",
-				"dweb:/ipfs/QmVg5JDHZPBdcVKMYpjcpf5EEt4F9hNrSi69srfkqTPiDF"
+				"bzz-raw://d6d15d72e724f2979292651804334a09c0ca7f842caf3bf2c923a8664174cffc",
+				"dweb:/ipfs/Qma3NDARgkhNVR37sX2rp28jRh9cWTpxxeJsUukX7LwEut"
 			]
 		}
 	},
