@@ -1,1 +1,1 @@
-Log my learning process in solidity
+Log my learning progrss in solidity
