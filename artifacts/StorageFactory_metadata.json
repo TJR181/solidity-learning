@@ -13,8 +13,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "simpleStorage",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "listOfSimpleStorage",
 				"outputs": [
 					{
 						"internalType": "contract SimpleStorage",
@@ -23,6 +29,43 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "__simpleStorageIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "sfGet",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_simpleStorageNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "sfStore",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -39,7 +82,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"learning/Solidity Smart Contract Development/Storage Factory/StorageFactoryImport.sol": "StorageFactory"
+			"learning/Solidity Smart Contract Development/Storage Factory/StorageFactoryList.sol": "StorageFactory"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -61,12 +104,12 @@
 				"dweb:/ipfs/Qma3NDARgkhNVR37sX2rp28jRh9cWTpxxeJsUukX7LwEut"
 			]
 		},
-		"learning/Solidity Smart Contract Development/Storage Factory/StorageFactoryImport.sol": {
-			"keccak256": "0x90aeffb113e635bca4f087f5ceea2afb2cade89bfe82522b20fcaea37207d27e",
+		"learning/Solidity Smart Contract Development/Storage Factory/StorageFactoryList.sol": {
+			"keccak256": "0x5fd97b0d52d162bbb4aeeb71223611b5b6557996b199d8eb033620b65c2b56ac",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1661ffc1fbba235174064d6ed172663a63df38591b0b47c85e564c64cc4da1f0",
-				"dweb:/ipfs/QmbhxHi61avZ7sMx1SS14e9hfz7829dnmhUoGrKCBUrX6D"
+				"bzz-raw://ca64da4b316603c70e7b598e88e1248fc7e0ee31d2e0c031d12eb40227857bd8",
+				"dweb:/ipfs/QmdUsNrjTafG8nBcBJQbWRtsw4RBb9k1JtUSq2ocgft894"
 			]
 		}
 	},
