@@ -1,0 +1,117 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "addPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "nameToFavoriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"learning/Solidity Smart Contract Development/Storage Factory/AddFiveStorage.sol": "AddFiveStorage"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"learning/Solidity Smart Contract Development/Storage Factory/AddFiveStorage.sol": {
+			"keccak256": "0xfafdc200ea7face9def154ee4b3639e77e974f490df3215966f7a6e4d1ea5287",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e2e76d668320df7cd7afc2b9fcc94e2daf585f10410cc538b7d5478b6a06cba8",
+				"dweb:/ipfs/QmaifohRjd2Dn8h1zLadmW9f5FbFjXuNZMswoCX4pY2pFs"
+			]
+		},
+		"learning/Solidity Smart Contract Development/Storage Factory/SimpleStorage.sol": {
+			"keccak256": "0x7688546ed428c7c90b152895a6bc3d949f59d77434c2978087e768b4312924f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a6f3fe7a5a79f1b4695fe729e2ef0f95f27f5c48da18ece8ffcbfe54dc147df",
+				"dweb:/ipfs/QmWc9dQRw3QRGUPLg2mmvM1bm43Gaw9nevevnfy6RKLBfG"
+			]
+		}
+	},
+	"version": 1
+}

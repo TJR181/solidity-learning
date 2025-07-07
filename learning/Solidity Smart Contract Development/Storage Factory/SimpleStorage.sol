@@ -12,6 +12,7 @@ contract SimpleStorage{
     Person[] listOfPeople;
     mapping(string => uint256) public nameToFavoriteNumber;
 
+    // keyword virtual means you can override this function by inherit
     function store(uint256 _favoriteNumber) public virtual{
         myFavoriteNumber = _favoriteNumber;
     }
