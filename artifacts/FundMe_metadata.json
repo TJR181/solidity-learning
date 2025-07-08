@@ -14,6 +14,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "myValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "withdraw",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -48,11 +61,11 @@
 	},
 	"sources": {
 		"learning/Solidity Smart Contract Development/Fund Me/FundMe.sol": {
-			"keccak256": "0x56aad76ef67f97f651afe51af15f906abf8f9ed08097f2904edb4e77b475fa35",
+			"keccak256": "0x97cb6c71b7fa28885fa308c09ffa0550dd9e436095a8491389a09842f8bc7dfa",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8e7b3c9d24f9927725d74d83a50e124832c38bef35fce1d90c71905c4f47ed31",
-				"dweb:/ipfs/QmcQP4cRAJXV8aR38MY6rVVGGCtgcLkRFU8aZp5ZoyjuK3"
+				"bzz-raw://eba785092a2a971984a89d85ec34640d4f49eab114ea88fd002c14bb58560a44",
+				"dweb:/ipfs/QmQ3cbfNYXUh93uUSikDBdNkxo5zGiBtgwTdumpfw8Zx4P"
 			]
 		}
 	},
