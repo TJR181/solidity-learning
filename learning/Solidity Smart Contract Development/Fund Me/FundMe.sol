@@ -7,6 +7,7 @@ pragma solidity ^0.8.19;
 
 contract FundMe{
 
+    uint256 minimumUSD = 5;
     uint256 public myValue = 1;
 
     function fund() public payable{
