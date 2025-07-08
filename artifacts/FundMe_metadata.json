@@ -9,7 +9,7 @@
 				"inputs": [],
 				"name": "fund",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -48,11 +48,11 @@
 	},
 	"sources": {
 		"learning/Solidity Smart Contract Development/Fund Me/FundMe.sol": {
-			"keccak256": "0x1f40b9db90671bb0c129bfe7878cc8fe5bef593744623e7771b9ff03d46739bf",
+			"keccak256": "0x56aad76ef67f97f651afe51af15f906abf8f9ed08097f2904edb4e77b475fa35",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2828570ec8f641c8ff5da104e3101ece70af78e13a8065f0b337a6fb59c5c576",
-				"dweb:/ipfs/QmVG7ywbFp5RyoaGapzSaqWyfcVswMLHZp6StTyurPKjHr"
+				"bzz-raw://8e7b3c9d24f9927725d74d83a50e124832c38bef35fce1d90c71905c4f47ed31",
+				"dweb:/ipfs/QmcQP4cRAJXV8aR38MY6rVVGGCtgcLkRFU8aZp5ZoyjuK3"
 			]
 		}
 	},
