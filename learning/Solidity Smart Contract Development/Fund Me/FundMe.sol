@@ -20,10 +20,13 @@ contract FundMe{
         // revert is undo any actions that have been done , and send the remaining gas back
     }
 
-    function getPrice() public{
+    function getPrice() public view returns (uint256){
         // Address = 0x694AA1769357215DE4FAC081bf1f309aDC325306
         // ABI
-        
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
+        (,int256 price,,,) = priceFeed.latestRoundData();
+        // Price in ETH in terms USD
+        return uint256(price * 1e10);
     }
 
     function getVersion() public view returns (uint256) {

@@ -130,7 +130,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"learning/Solidity Smart Contract Development/Fund Me/FundMe.sol": "AggregatorV3Interface"
+			"learning/Solidity Smart Contract Development/Fund Me/FundMeImportArtificially.sol": "AggregatorV3Interface"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -144,7 +144,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"learning/Solidity Smart Contract Development/Fund Me/FundMe.sol": {
+		"learning/Solidity Smart Contract Development/Fund Me/FundMeImportArtificially.sol": {
 			"keccak256": "0x025be17d134e2a6017f339cb0a64f62c195382574d11ba059236210c74d4b455",
 			"license": "MIT",
 			"urls": [

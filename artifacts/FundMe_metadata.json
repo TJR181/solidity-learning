@@ -15,8 +15,14 @@
 			{
 				"inputs": [],
 				"name": "getPrice",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -89,11 +95,11 @@
 			]
 		},
 		"learning/Solidity Smart Contract Development/Fund Me/FundMe.sol": {
-			"keccak256": "0x8e72aaa3109d70a7463104f0445c951f58776f4dc03687d9a8737160896b9350",
+			"keccak256": "0x4c0a5e9ccc7fa186d94cbe029fe61a7e0f53c3b87151e9fd272f0ee842b50e99",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ce2261e48a6bb37c50033c032a16005f5efd948f2150d771889a465b4002380d",
-				"dweb:/ipfs/QmX3w7PV6tqUzLvtCZ4y15nNZDdFGyHVd1QUzoAn5Wg4rH"
+				"bzz-raw://9929849b2ea6ddf31014f23eed92eccb619f964f4d86d3443a6a4e2738a1d7db",
+				"dweb:/ipfs/QmRJUnYifHuUpqWkTPkFP2Q1Xg3g7x5J6muANtLBAk99mE"
 			]
 		}
 	},
