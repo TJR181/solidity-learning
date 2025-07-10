@@ -6,10 +6,67 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					}
+				],
+				"name": "addressToAmountFunded",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountFunded",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "fund",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "funders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "ethAmouht",
+						"type": "uint256"
+					}
+				],
+				"name": "getConversionRate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -95,11 +152,11 @@
 			]
 		},
 		"learning/Solidity Smart Contract Development/Fund Me/FundMe.sol": {
-			"keccak256": "0x4c0a5e9ccc7fa186d94cbe029fe61a7e0f53c3b87151e9fd272f0ee842b50e99",
+			"keccak256": "0x97b56dae5281b18719bf90d131d942573e668727ba1196404ba79a904fedb9d1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9929849b2ea6ddf31014f23eed92eccb619f964f4d86d3443a6a4e2738a1d7db",
-				"dweb:/ipfs/QmRJUnYifHuUpqWkTPkFP2Q1Xg3g7x5J6muANtLBAk99mE"
+				"bzz-raw://583f3b74360d7a7f941b28fc4b4da7f141f4f2f59c5363c19631d1f38222b53d",
+				"dweb:/ipfs/QmVsddkYw8cQ3u5Gz2m6k6r4NJFZd1BkZbRjbPrxX6xZ23"
 			]
 		}
 	},

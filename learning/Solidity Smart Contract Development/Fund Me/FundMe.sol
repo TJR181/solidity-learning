@@ -9,15 +9,19 @@ import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interf
 
 contract FundMe{
 
-    uint256 minimumUSD = 5;
+    address[] public funders;
+    mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
+    uint256 minimumUSD = 5 * 1e18;
     uint256 public myValue = 1;
 
     function fund() public payable{
-        myValue = myValue +2;
-        require(msg.value > 1e18 , "didn't send enough ETH");
+        //myValue = myValue +2;
+        require(getConversionRate(msg.value) >= minimumUSD , "didn't send enough ETH");
 
         // What is revert?
-        // revert is undo any actions that have been done , and send the remaining gas back
+        // revert is undo any actions that have been done , and send the remaining gas back↑
+        funders.push(msg.sender);
+        addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
     }
 
     function getPrice() public view returns (uint256){
@@ -27,6 +31,11 @@ contract FundMe{
         (,int256 price,,,) = priceFeed.latestRoundData();
         // Price in ETH in terms USD
         return uint256(price * 1e10);
+    }
+
+    function getConversionRate(uint256 ethAmouht) public view returns (uint256){
+        uint256 usdAmount = ethAmouht * getPrice() / 1e18;
+        return usdAmount;
     }
 
     function getVersion() public view returns (uint256) {
