@@ -8,51 +8,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "funder",
-						"type": "address"
-					}
-				],
-				"name": "addressToAmountFunded",
-				"outputs": [
-					{
 						"internalType": "uint256",
-						"name": "amountFunded",
+						"name": "ethAmount",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "fund",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "funders",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "myValue",
+				"name": "getConversionRate",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -65,9 +26,28 @@
 			},
 			{
 				"inputs": [],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "getPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -84,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"learning/Solidity Smart Contract Development/Fund Me/FundMe.sol": "FundMe"
+			"learning/Solidity Smart Contract Development/Fund Me/PriceConverter.sol": "PriceConverter"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -104,14 +84,6 @@
 			"urls": [
 				"bzz-raw://6d39e11b1dc7b9b8ccdabbc9be442ab7cda4a81c748f57e316dcb1bcb4a28bf9",
 				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
-			]
-		},
-		"learning/Solidity Smart Contract Development/Fund Me/FundMe.sol": {
-			"keccak256": "0x1829b3279b94720ed030bf8490ff285890288d6f33bf0dcc9f99dbc9ccf7538b",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://e0211fcd4b08fbf518d8b79d82fad84d8014287ca0f2714fb4d3ff0e5a3a5f07",
-				"dweb:/ipfs/QmZpyyEvyRpwXyakNHDAh6sFnXsyXgGgKSniWyfFt2tLcz"
 			]
 		},
 		"learning/Solidity Smart Contract Development/Fund Me/PriceConverter.sol": {
