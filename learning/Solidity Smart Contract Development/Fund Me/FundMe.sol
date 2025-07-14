@@ -13,8 +13,14 @@ contract FundMe{
 
     address[] public funders;
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
-    uint256 minimumUSD = 5 * 1e18;
+    uint256 public minimumUSD = 5 * 1e18;
     uint256 public myValue = 1;
+    address public owner;
+
+    // constructor is a function that was called immediately once we deploy a contract
+    constructor(){
+        owner = msg.sender;
+    }
 
     function fund() public payable{
         //myValue = myValue +2;
@@ -29,6 +35,7 @@ contract FundMe{
 
 
     function withdraw() public{
+        require(msg.sender == owner , "Must be owner!");
         for(uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++){
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
