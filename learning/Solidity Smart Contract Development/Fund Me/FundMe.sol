@@ -13,9 +13,9 @@ contract FundMe{
 
     address[] public funders;
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
-    uint256 public minimumUSD = 5 * 1e18;
+    uint256 public constant MINIMUM_USD = 5 * 1e18;
     uint256 public myValue = 1;
-    address public owner;
+    address public immutable owner;
 
     // constructor is a function that was called immediately once we deploy a contract
     constructor(){
@@ -25,7 +25,7 @@ contract FundMe{
     function fund() public payable{
         //myValue = myValue +2;
         //require(getConversionRate(msg.value) >= minimumUSD , "didn't send enough ETH");
-        require(msg.value.getConversionRate() >= minimumUSD , "didn't send enough ETH");
+        require(msg.value.getConversionRate() >= MINIMUM_USD , "didn't send enough ETH");
         // What is revert?
         // revert is undo any actions that have been done , and send the remaining gas back↑
         funders.push(msg.sender);
@@ -35,7 +35,7 @@ contract FundMe{
 
 
     function withdraw() public onlyOwner{
-        require(msg.sender == owner , "Must be owner!");
+        //require(msg.sender == owner , "Must be owner!");
         for(uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++){
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
@@ -50,11 +50,11 @@ contract FundMe{
         // 1.Transfer
         // msg.sender is an address type
         // payable(msg.sender) is a payable address type
-        payable(msg.sender).transfer(address(this).balance);
+        //payable(msg.sender).transfer(address(this).balance);
 
         // 2.Send
-        bool sendSuccess = payable(msg.sender).send(address(this).balance);
-        require(sendSuccess , "send failed!");
+        //bool sendSuccess = payable(msg.sender).send(address(this).balance);
+        //require(sendSuccess , "send failed!");
 
         // 3.Call
         (bool callSuccess , ) = payable(msg.sender).call{value: address(this).balance}("");
