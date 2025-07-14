@@ -8,19 +8,98 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					},
-					{
 						"internalType": "uint256",
 						"name": "_favoriteNumber",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
 					}
 				],
 				"name": "addPerson",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "anotherFriend",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "listOfFacoriteNumbers",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "listOfPeople",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myFriend",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -82,7 +161,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"learning/Solidity Smart Contract Development/Storage Factory/SimpleStorage.sol": "SimpleStorage"
+			"contracts/Mapping.sol": "SimpleStorage"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -96,12 +175,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"learning/Solidity Smart Contract Development/Storage Factory/SimpleStorage.sol": {
-			"keccak256": "0x2f56d9439be7b8b3fe7d2b3a06fe9a5e6525eb5411b93fb1d2a707c44d128773",
+		"contracts/Mapping.sol": {
+			"keccak256": "0xac645d8fe7cb090b41442bb3de6faf765253dd67992b9a207e587865d7fc9709",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d6d15d72e724f2979292651804334a09c0ca7f842caf3bf2c923a8664174cffc",
-				"dweb:/ipfs/Qma3NDARgkhNVR37sX2rp28jRh9cWTpxxeJsUukX7LwEut"
+				"bzz-raw://585162f0444fc011bf6dbf9ff994f6e136d3f8ad038869318da4761519975422",
+				"dweb:/ipfs/QmcJnkE4RMUHY8XpHsaiHgNePgU8Maa5GKn8oPjc1fDLiH"
 			]
 		}
 	},

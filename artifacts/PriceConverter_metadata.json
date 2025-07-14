@@ -64,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"learning/Solidity Smart Contract Development/Fund Me/PriceConverter.sol": "PriceConverter"
+			"contracts/PriceConverter.sol": "PriceConverter"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -86,12 +86,12 @@
 				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
 			]
 		},
-		"learning/Solidity Smart Contract Development/Fund Me/PriceConverter.sol": {
-			"keccak256": "0xdb0cc094701d8047afe26f912206e2da24c812425a7710aae5f228ced61ed001",
+		"contracts/PriceConverter.sol": {
+			"keccak256": "0x1310f5bcde8b4f67a81c0c8c71ef08fbb40ca9eb042747251472978815501629",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://10b807933d4233aa9eaa3ad0bd3c30a897895ae82bc7004cbe31aebbf548cc43",
-				"dweb:/ipfs/QmSp2LQZ7BjgQZnwTddW9yZWi3JtBJmQFhu1vDWPxyCNEe"
+				"bzz-raw://ea17e39ace85d75e2a261d53795e724143bac7f4eb58cd2e6c377b0b56d279c5",
+				"dweb:/ipfs/QmPknr2A3NZuJ8Xni5D91bMzVpDd3qTw1WsrtaKSKHY8vQ"
 			]
 		}
 	},
