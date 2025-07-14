@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "result",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"learning/Solidity Smart Contract Development/Fund Me/FallbackExample.sol": "FallbackExample"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"learning/Solidity Smart Contract Development/Fund Me/FallbackExample.sol": {
+			"keccak256": "0xb9cf9ac086612017ada99ff33130cc40a276b73ed99dcf305a48a401606c7e1b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ac59d86352e186f9557e5823e5c855b9c6ce39516a8f754fe28aa2a83a43408d",
+				"dweb:/ipfs/QmUjAQcEYyhTsnsmYSV3E7ieeGQ9e8U8nGMDcCVqmoimQf"
+			]
+		}
+	},
+	"version": 1
+}
