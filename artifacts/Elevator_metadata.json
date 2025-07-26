@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "floor",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_floor",
+						"type": "uint256"
+					}
+				],
+				"name": "goTo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "top",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"security/etheranut/Elevator/Elevator.sol": "Elevator"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"security/etheranut/Elevator/Elevator.sol": {
+			"keccak256": "0xbcd29dcf9fcd99574fc13a6040c5ac0dbc8382e297f344b7a74b473973e095c0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7624cb06caf1946350fd26b393efc5c705e90251b93a566535f08f1c2b915911",
+				"dweb:/ipfs/Qmcb2ii5UiVQ1BMjm1eZW2cPfbRdp2Qg3bG1quq2S6pAu7"
+			]
+		}
+	},
+	"version": 1
+}

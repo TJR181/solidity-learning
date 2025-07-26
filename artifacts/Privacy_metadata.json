@@ -6,8 +6,51 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "bytes32[3]",
+						"name": "_data",
+						"type": "bytes32[3]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [],
-				"name": "attack",
+				"name": "ID",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "locked",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes16",
+						"name": "_key",
+						"type": "bytes16"
+					}
+				],
+				"name": "unlock",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -26,7 +69,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"security/etheranut/Privacy/Privacy.sol": "Hack"
+			"security/etheranut/Privacy/Privacy.sol": "Privacy"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
