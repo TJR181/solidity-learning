@@ -1,0 +1,920 @@
+{
+	"id": "174adb4c4f0743e2d50fd3a146f0e1bd",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.30",
+	"solcLongVersion": "0.8.30+commit.73712a01",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"security/etheranut/Force/Force.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract Force { /*\r\n                   MEOW ?\r\n         /\\_/\\   /\r\n    ____/ o o \\\r\n    /~____  =ø= /\r\n    (______)__m_m)\r\n                   */ }\r\n\r\ncontract Hack {\r\n    address payable target = payable(0x38083500e6a9E5Ff4d2236038A1cB5Fc4Eb92AA0);\r\n    constructor() payable {\r\n        selfdestruct(target);\r\n    }\r\n\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"security/etheranut/Force/Force.sol": {
+				"Force": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"security/etheranut/Force/Force.sol\":60:208  contract Force { /*... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  revert(0x00, 0x00)\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"security/etheranut/Force/Force.sol\":60:208  contract Force { /*... */\n      mstore(0x40, 0x80)\n      revert(0x00, 0x00)\n\n    auxdata: 0xa26469706673582212204c31a8737ebf6985e0ad8b106870da61e2928b5b1c9710c2141287d440293dac64736f6c634300081e0033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600e575f5ffd5b50603e80601a5f395ff3fe60806040525f5ffdfea26469706673582212204c31a8737ebf6985e0ad8b106870da61e2928b5b1c9710c2141287d440293dac64736f6c634300081e0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xE JUMPI PUSH0 PUSH0 REVERT JUMPDEST POP PUSH1 0x3E DUP1 PUSH1 0x1A PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x4C BALANCE 0xA8 PUSH20 0x7EBF6985E0AD8B106870DA61E2928B5B1C9710C2 EQ SLT DUP8 0xD4 BLOCKHASH 0x29 RETURNDATASIZE 0xAC PUSH5 0x736F6C6343 STOP ADDMOD 0x1E STOP CALLER ",
+							"sourceMap": "60:148:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "60806040525f5ffdfea26469706673582212204c31a8737ebf6985e0ad8b106870da61e2928b5b1c9710c2141287d440293dac64736f6c634300081e0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x4C BALANCE 0xA8 PUSH20 0x7EBF6985E0AD8B106870DA61E2928B5B1C9710C2 EQ SLT DUP8 0xD4 BLOCKHASH 0x29 RETURNDATASIZE 0xAC PUSH5 0x736F6C6343 STOP ADDMOD 0x1E STOP CALLER ",
+							"sourceMap": "60:148:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12400",
+								"executionCost": "64",
+								"totalCost": "12464"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 60,
+									"end": 208,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a26469706673582212204c31a8737ebf6985e0ad8b106870da61e2928b5b1c9710c2141287d440293dac64736f6c634300081e0033",
+									".code": [
+										{
+											"begin": 60,
+											"end": 208,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 60,
+											"end": 208,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 60,
+											"end": 208,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 60,
+											"end": 208,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 60,
+											"end": 208,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 60,
+											"end": 208,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"security/etheranut/Force/Force.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"security/etheranut/Force/Force.sol\":\"Force\"},\"evmVersion\":\"prague\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"security/etheranut/Force/Force.sol\":{\"keccak256\":\"0xda44e40686a55b9e98a79c58baf183a17550843e532f6f97b55ff94edb20f9e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://64bd23cb7d43027f900cbc197d5c8024b6c1ad461ae3767d5860da68dbab6408\",\"dweb:/ipfs/QmZEioEBWJSYTG219w5FcdMoWRSVFb37UZaC3yLWMpLvNM\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				},
+				"Hack": {
+					"abi": [
+						{
+							"inputs": [],
+							"stateMutability": "payable",
+							"type": "constructor"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"security/etheranut/Force/Force.sol\":212:382  contract Hack {... */\n  mstore(0x40, 0x80)\n    /* \"security/etheranut/Force/Force.sol\":266:308  0x38083500e6a9E5Ff4d2236038A1cB5Fc4Eb92AA0 */\n  0x38083500e6a9e5ff4d2236038a1cb5fc4eb92aa0\n    /* \"security/etheranut/Force/Force.sol\":233:309  address payable target = payable(0x38083500e6a9E5Ff4d2236038A1cB5Fc4Eb92AA0) */\n  0x00\n  exp(0x0100, 0x00)\n  dup2\n  sload\n  dup2\n  0xffffffffffffffffffffffffffffffffffffffff\n  mul\n  not\n  and\n  swap1\n  dup4\n  0xffffffffffffffffffffffffffffffffffffffff\n  and\n  mul\n  or\n  swap1\n  sstore\n  pop\n    /* \"security/etheranut/Force/Force.sol\":362:368  target */\n  0x00\n  0x00\n  swap1\n  sload\n  swap1\n  0x0100\n  exp\n  swap1\n  div\n  0xffffffffffffffffffffffffffffffffffffffff\n  and\n    /* \"security/etheranut/Force/Force.sol\":349:369  selfdestruct(target) */\n  0xffffffffffffffffffffffffffffffffffffffff\n  and\n  selfdestruct\nstop\n\nsub_0: assembly {\n        /* \"security/etheranut/Force/Force.sol\":212:382  contract Hack {... */\n      mstore(0x40, 0x80)\n      revert(0x00, 0x00)\n\n    auxdata: 0xa26469706673582212207eba9496f8ba8802f743237f0249c4b4e7396783d8534aad0a0e6383611e663464736f6c634300081e0033\n}\n",
+						"bytecode": {
+							"functionDebugData": {
+								"@_16": {
+									"entryPoint": null,
+									"id": 16,
+									"parameterSlots": 0,
+									"returnSlots": 0
+								}
+							},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "60806040527338083500e6a9e5ff4d2236038a1cb5fc4eb92aa05f5f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505f5f9054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16fffe",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH20 0x38083500E6A9E5FF4D2236038A1CB5FC4EB92AA0 PUSH0 PUSH0 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF MUL NOT AND SWAP1 DUP4 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND MUL OR SWAP1 SSTORE POP PUSH0 PUSH0 SWAP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND SELFDESTRUCT INVALID ",
+							"sourceMap": "212:170:0:-:0;;;266:42;233:76;;;;;;;;;;;;;;;;;;;;362:6;;;;;;;;;;;349:20;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "60806040525f5ffdfea26469706673582212207eba9496f8ba8802f743237f0249c4b4e7396783d8534aad0a0e6383611e663464736f6c634300081e0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH31 0xBA9496F8BA8802F743237F0249C4B4E7396783D8534AAD0A0E6383611E6634 PUSH5 0x736F6C6343 STOP ADDMOD 0x1E STOP CALLER ",
+							"sourceMap": "212:170:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12400",
+								"executionCost": "54026",
+								"totalCost": "66426"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 212,
+									"end": 382,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 212,
+									"end": 382,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 212,
+									"end": 382,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 266,
+									"end": 308,
+									"name": "PUSH",
+									"source": 0,
+									"value": "38083500E6A9E5FF4D2236038A1CB5FC4EB92AA0"
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "PUSH",
+									"source": 0,
+									"value": "100"
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "EXP",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "SLOAD",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "NOT",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "DUP4",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "OR",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "SSTORE",
+									"source": 0
+								},
+								{
+									"begin": 233,
+									"end": 309,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "SLOAD",
+									"source": 0
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "PUSH",
+									"source": 0,
+									"value": "100"
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "EXP",
+									"source": 0
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "DIV",
+									"source": 0
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 362,
+									"end": 368,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 349,
+									"end": 369,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 349,
+									"end": 369,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 349,
+									"end": 369,
+									"name": "SELFDESTRUCT",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a26469706673582212207eba9496f8ba8802f743237f0249c4b4e7396783d8534aad0a0e6383611e663464736f6c634300081e0033",
+									".code": [
+										{
+											"begin": 212,
+											"end": 382,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 212,
+											"end": 382,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 212,
+											"end": 382,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 212,
+											"end": 382,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 212,
+											"end": 382,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 212,
+											"end": 382,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"security/etheranut/Force/Force.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"payable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"security/etheranut/Force/Force.sol\":\"Hack\"},\"evmVersion\":\"prague\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"security/etheranut/Force/Force.sol\":{\"keccak256\":\"0xda44e40686a55b9e98a79c58baf183a17550843e532f6f97b55ff94edb20f9e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://64bd23cb7d43027f900cbc197d5c8024b6c1ad461ae3767d5860da68dbab6408\",\"dweb:/ipfs/QmZEioEBWJSYTG219w5FcdMoWRSVFb37UZaC3yLWMpLvNM\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 8,
+								"contract": "security/etheranut/Force/Force.sol:Hack",
+								"label": "target",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_address_payable"
+							}
+						],
+						"types": {
+							"t_address_payable": {
+								"encoding": "inplace",
+								"label": "address payable",
+								"numberOfBytes": "20"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "5159",
+				"formattedMessage": "Warning: \"selfdestruct\" has been deprecated. Note that, starting from the Cancun hard fork, the underlying opcode no longer deletes the code and data associated with an account and only transfers its Ether to the beneficiary, unless executed in the same transaction in which the contract was created (see EIP-6780). Any use in newly deployed contracts is strongly discouraged even if the new behavior is taken into account. Future changes to the EVM might further reduce the functionality of the opcode.\n  --> security/etheranut/Force/Force.sol:15:9:\n   |\n15 |         selfdestruct(target);\n   |         ^^^^^^^^^^^^\n\n",
+				"message": "\"selfdestruct\" has been deprecated. Note that, starting from the Cancun hard fork, the underlying opcode no longer deletes the code and data associated with an account and only transfers its Ether to the beneficiary, unless executed in the same transaction in which the contract was created (see EIP-6780). Any use in newly deployed contracts is strongly discouraged even if the new behavior is taken into account. Future changes to the EVM might further reduce the functionality of the opcode.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": 361,
+					"file": "security/etheranut/Force/Force.sol",
+					"start": 349
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"security/etheranut/Force/Force.sol": {
+				"ast": {
+					"absolutePath": "security/etheranut/Force/Force.sol",
+					"exportedSymbols": {
+						"Force": [
+							2
+						],
+						"Hack": [
+							17
+						]
+					},
+					"id": 18,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "Force",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 2,
+							"linearizedBaseContracts": [
+								2
+							],
+							"name": "Force",
+							"nameLocation": "69:5:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [],
+							"scope": 18,
+							"src": "60:148:0",
+							"usedErrors": [],
+							"usedEvents": []
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "Hack",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 17,
+							"linearizedBaseContracts": [
+								17
+							],
+							"name": "Hack",
+							"nameLocation": "221:4:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"id": 8,
+									"mutability": "mutable",
+									"name": "target",
+									"nameLocation": "249:6:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 17,
+									"src": "233:76:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address_payable",
+										"typeString": "address payable"
+									},
+									"typeName": {
+										"id": 3,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "233:15:0",
+										"stateMutability": "payable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address_payable",
+											"typeString": "address payable"
+										}
+									},
+									"value": {
+										"arguments": [
+											{
+												"hexValue": "307833383038333530306536613945354666346432323336303338413163423546633445623932414130",
+												"id": 6,
+												"isConstant": false,
+												"isLValue": false,
+												"isPure": true,
+												"kind": "number",
+												"lValueRequested": false,
+												"nodeType": "Literal",
+												"src": "266:42:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"value": "0x38083500e6a9E5Ff4d2236038A1cB5Fc4Eb92AA0"
+											}
+										],
+										"expression": {
+											"argumentTypes": [
+												{
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												}
+											],
+											"id": 5,
+											"isConstant": false,
+											"isLValue": false,
+											"isPure": true,
+											"lValueRequested": false,
+											"nodeType": "ElementaryTypeNameExpression",
+											"src": "258:8:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_type$_t_address_payable_$",
+												"typeString": "type(address payable)"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "address",
+												"nodeType": "ElementaryTypeName",
+												"src": "258:8:0",
+												"stateMutability": "payable",
+												"typeDescriptions": {}
+											}
+										},
+										"id": 7,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "typeConversion",
+										"lValueRequested": false,
+										"nameLocations": [],
+										"names": [],
+										"nodeType": "FunctionCall",
+										"src": "258:51:0",
+										"tryCall": false,
+										"typeDescriptions": {
+											"typeIdentifier": "t_address_payable",
+											"typeString": "address payable"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 15,
+										"nodeType": "Block",
+										"src": "338:39:0",
+										"statements": [
+											{
+												"expression": {
+													"arguments": [
+														{
+															"id": 12,
+															"name": "target",
+															"nodeType": "Identifier",
+															"overloadedDeclarations": [],
+															"referencedDeclaration": 8,
+															"src": "362:6:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_address_payable",
+																"typeString": "address payable"
+															}
+														}
+													],
+													"expression": {
+														"argumentTypes": [
+															{
+																"typeIdentifier": "t_address_payable",
+																"typeString": "address payable"
+															}
+														],
+														"id": 11,
+														"name": "selfdestruct",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 4294967275,
+														"src": "349:12:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
+															"typeString": "function (address payable)"
+														}
+													},
+													"id": 13,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"kind": "functionCall",
+													"lValueRequested": false,
+													"nameLocations": [],
+													"names": [],
+													"nodeType": "FunctionCall",
+													"src": "349:20:0",
+													"tryCall": false,
+													"typeDescriptions": {
+														"typeIdentifier": "t_tuple$__$",
+														"typeString": "tuple()"
+													}
+												},
+												"id": 14,
+												"nodeType": "ExpressionStatement",
+												"src": "349:20:0"
+											}
+										]
+									},
+									"id": 16,
+									"implemented": true,
+									"kind": "constructor",
+									"modifiers": [],
+									"name": "",
+									"nameLocation": "-1:-1:-1",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 9,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "327:2:0"
+									},
+									"returnParameters": {
+										"id": 10,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "338:0:0"
+									},
+									"scope": 17,
+									"src": "316:61:0",
+									"stateMutability": "payable",
+									"virtual": false,
+									"visibility": "public"
+								}
+							],
+							"scope": 18,
+							"src": "212:170:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "33:349:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
