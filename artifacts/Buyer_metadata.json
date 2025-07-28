@@ -7,13 +7,6 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "attack",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "price",
 				"outputs": [
 					{
@@ -39,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"security/ethernaut/Shop/shop.sol": "Hack"
+			"security/ethernaut/Shop/shop.sol": "Buyer"
 		},
 		"evmVersion": "prague",
 		"libraries": {},

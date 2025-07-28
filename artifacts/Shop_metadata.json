@@ -7,9 +7,22 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "attack",
+				"name": "buy",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isSold",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -39,7 +52,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"security/ethernaut/Shop/shop.sol": "Hack"
+			"security/ethernaut/Shop/shop.sol": "Shop"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
