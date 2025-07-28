@@ -7,7 +7,52 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "attack",
+				"name": "contractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "partner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_partner",
+						"type": "address"
+					}
+				],
+				"name": "setWithdrawPartner",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -16,7 +61,7 @@
 				"inputs": [],
 				"name": "withdraw",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -37,7 +82,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"security/etheranut/Denial/Denia.sol": "Hack"
+			"security/etheranut/Denial/Denia.sol": "Denial"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
