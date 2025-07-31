@@ -15,6 +15,9 @@ contract HelperConfig is Script {
     // otherwise, grab the existing address from the live network
     NetworkConfig public activeNetworkConfig;
 
+    uint8 public constant DECIMALS = 8;
+    int256 public constant INITAL_PRICE = 2000e8;
+
     struct NetworkConfig {
         address priceFeed; // ETH/USD price feed address
     }
@@ -53,7 +56,7 @@ contract HelperConfig is Script {
         // 1.Deploy the mock
         // 2.Return the mock address
         vm.startBroadcast();
-        MockV3Aggregator mockPriceFeed = new MockV3Aggregator(8,2000e8);
+        MockV3Aggregator mockPriceFeed = new MockV3Aggregator(DECIMALS, INITAL_PRICE);
         vm.startBroadcast();
         NetworkConfig memory anvilConfig = NetworkConfig({
             priceFeed: address(mockPriceFeed)
