@@ -3,10 +3,13 @@ pragma solidity ^0.8.19;
 
 import {FundMe} from "../src/FundMe.sol";
 import {Script} from "forge-std/Script.sol";
+import {HelperConfig} from "./HelperConfig.s.sol";
 
 contract DeployFundMe is Script {
-    address public priceFeed = 0x694AA1769357215DE4FAC081bf1f309aDC325306;
     function run() external returns(FundMe) {
+        // Before startBroadcast is not a real tx
+        HelperConfig helperConfig = new HelperConfig();
+        address priceFeed = helperConfig.activeNetworkConfig();
         vm.startBroadcast();
         FundMe fundMe = new FundMe(priceFeed);
         vm.stopBroadcast();
