@@ -30,7 +30,7 @@ contract HelperConfig is Script {
             activeNetworkConfig = getMainnetEhConfig();
         }
         else {
-            activeNetworkConfig = getAnvilEhConfig();
+            activeNetworkConfig = getOrCreateAnvilEhConfig();
         }
     }
 
@@ -50,14 +50,16 @@ contract HelperConfig is Script {
         return ethConfig;
     }
 
-    function getAnvilEhConfig() public returns(NetworkConfig memory) {
-        // price feed address
+    function getOrCreateAnvilEhConfig() public returns(NetworkConfig memory) {
+        if (activeNetworkConfig.priceFeed != address(0)) {
+            return activeNetworkConfig;
+        }
 
         // 1.Deploy the mock
         // 2.Return the mock address
         vm.startBroadcast();
         MockV3Aggregator mockPriceFeed = new MockV3Aggregator(DECIMALS, INITAL_PRICE);
-        vm.startBroadcast();
+        vm.stopBroadcast();
         NetworkConfig memory anvilConfig = NetworkConfig({
             priceFeed: address(mockPriceFeed)
         });
