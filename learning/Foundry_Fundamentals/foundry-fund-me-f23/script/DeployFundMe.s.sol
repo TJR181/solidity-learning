@@ -6,7 +6,7 @@ import {Script} from "forge-std/Script.sol";
 import {HelperConfig} from "./HelperConfig.s.sol";
 
 contract DeployFundMe is Script {
-    function run() external returns(FundMe) {
+    function run() external returns (FundMe) {
         // Before startBroadcast is not a real tx
         HelperConfig helperConfig = new HelperConfig();
         address priceFeed = helperConfig.activeNetworkConfig();
@@ -15,4 +15,4 @@ contract DeployFundMe is Script {
         vm.stopBroadcast();
         return fundMe;
     }
-} 
+}
