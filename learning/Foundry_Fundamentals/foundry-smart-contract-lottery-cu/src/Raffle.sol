@@ -35,6 +35,7 @@ contract Riffle is VRFConsumerBaseV2Plus {
     /* Errors */
     error Raffle__ETHAmountError();
     error Raffle__ShouldExceedInternal();
+    error Raffle__TransferFailed();
 
     uint16 private constant REQUEST_CONFIRMATIONS = 3;
     uint32 private immutable CALLBACK_GAS_LIMIT;
@@ -45,6 +46,7 @@ contract Riffle is VRFConsumerBaseV2Plus {
     bytes32 private immutable I_KEYHASH;
     uint256 private lastTimeStamp;
     address payable[] private players;
+    address private recentWinner;
 
     /* Events */
     event RaffleEntered(address indexed player);
@@ -100,7 +102,14 @@ contract Riffle is VRFConsumerBaseV2Plus {
         uint256 requestId = s_vrfCoordinator.requestRandomWords(requests);
     }
 
-    function fulfillRandomWords(uint256 requestId, uint256[] calldata randomWords) internal override {}
+    function fulfillRandomWords(uint256 requestId, uint256[] calldata randomWords) internal override {
+        uint256 indexOfWinner = randomWords[0] % players.length;
+        recentWinner = players[indexOfWinner];
+        (bool success,) = recentWinner.call{value: address(this).balance}("");
+        if(!success) {
+            revert Raffle__TransferFailed();
+        }
+    }
 
     /**
      * Getter Functions
