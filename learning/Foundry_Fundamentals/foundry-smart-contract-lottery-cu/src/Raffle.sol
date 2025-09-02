@@ -59,7 +59,7 @@ contract Riffle is VRFConsumerBaseV2Plus {
 
     /* Events */
     event RaffleEntered(address indexed player);
-    event WinnerPicken(address indexed winner);
+    event WinnerPicked(address indexed winner);
 
     constructor(
         uint256 _entranceFee,
@@ -121,17 +121,19 @@ contract Riffle is VRFConsumerBaseV2Plus {
         uint256 requestId = s_vrfCoordinator.requestRandomWords(requests);
     }
 
+    // CEI: Checks, Effects, Interactions Patten
     function fulfillRandomWords(uint256 requestId, uint256[] calldata randomWords) internal override {
         uint256 indexOfWinner = randomWords[0] % players.length;
         recentWinner = players[indexOfWinner];
-        (bool success,) = recentWinner.call{value: address(this).balance}("");
-        if(!success) {
-            revert Raffle__TransferFailed();
-        }
         raffleState = RaffleState.OPEN;
         players = new address payable[](0);
         lastTimeStamp = block.timestamp;
         emit WinnerPicked(recentWinner);
+        
+        (bool success,) = recentWinner.call{value: address(this).balance}("");
+        if(!success) {
+            revert Raffle__TransferFailed();
+        }
     }
 
     /**
