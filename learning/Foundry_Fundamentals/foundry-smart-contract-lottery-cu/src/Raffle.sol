@@ -100,7 +100,7 @@ contract Riffle is VRFConsumerBaseV2Plus {
         uint256 requestId = s_vrfCoordinator.requestRandomWords(requests);
     }
 
-    function fulfillRandomWords(uint256 requestId, uint256[] calldata randomWords) internal virtual override {}
+    function fulfillRandomWords(uint256 requestId, uint256[] calldata randomWords) internal override {}
 
     /**
      * Getter Functions
