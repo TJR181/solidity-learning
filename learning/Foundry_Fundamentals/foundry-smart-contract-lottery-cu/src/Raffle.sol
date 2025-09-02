@@ -36,7 +36,15 @@ contract Riffle is VRFConsumerBaseV2Plus {
     error Raffle__ETHAmountError();
     error Raffle__ShouldExceedInternal();
     error Raffle__TransferFailed();
+    error Raffle__RaffleNotOpen();
 
+    /* Type Declarations */
+    enum RaffleState {
+        OPEN, // 0
+        CALCULATING // 1
+    }
+
+    /* State Variables */
     uint16 private constant REQUEST_CONFIRMATIONS = 3;
     uint32 private immutable CALLBACK_GAS_LIMIT;
     uint32 private constant NUM_WORDS = 1;
@@ -47,6 +55,7 @@ contract Riffle is VRFConsumerBaseV2Plus {
     uint256 private lastTimeStamp;
     address payable[] private players;
     address private recentWinner;
+    RaffleState private raffleState;
 
     /* Events */
     event RaffleEntered(address indexed player);
@@ -65,6 +74,7 @@ contract Riffle is VRFConsumerBaseV2Plus {
         I_KEYHASH = _gasLane;
         CALLBACK_GAS_LIMIT = _callbackGasLimit;
         lastTimeStamp = block.timestamp;
+        raffleState = RaffleState.OPEN;
     }
 
     function enterRaffle() public payable {
@@ -73,6 +83,11 @@ contract Riffle is VRFConsumerBaseV2Plus {
         if (msg.value != I_ENTRANCEFEE) {
             revert Raffle__ETHAmountError();
         }
+
+        if(raffleState != RaffleState.OPEN) {
+            revert Raffle__RaffleNotOpen();
+        }
+
         players.push(payable(msg.sender));
         emit RaffleEntered(msg.sender);
     }
@@ -85,6 +100,9 @@ contract Riffle is VRFConsumerBaseV2Plus {
         if (block.timestamp - lastTimeStamp < I_INTERVAL) {
             revert Raffle__ShouldExceedInternal();
         }
+
+        raffleState = RaffleState.CALCULATING;
+
         // Get random number by chainlink v2.5
         // 1. request RNG
         // 2. Get RNG
@@ -109,6 +127,7 @@ contract Riffle is VRFConsumerBaseV2Plus {
         if(!success) {
             revert Raffle__TransferFailed();
         }
+        raffleState = RaffleState.OPEN;
     }
 
     /**
