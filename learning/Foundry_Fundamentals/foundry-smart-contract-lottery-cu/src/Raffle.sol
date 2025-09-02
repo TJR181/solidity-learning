@@ -59,6 +59,7 @@ contract Riffle is VRFConsumerBaseV2Plus {
 
     /* Events */
     event RaffleEntered(address indexed player);
+    event WinnerPicken(address indexed winner);
 
     constructor(
         uint256 _entranceFee,
@@ -128,6 +129,9 @@ contract Riffle is VRFConsumerBaseV2Plus {
             revert Raffle__TransferFailed();
         }
         raffleState = RaffleState.OPEN;
+        players = new address payable[](0);
+        lastTimeStamp = block.timestamp;
+        emit WinnerPicked(recentWinner);
     }
 
     /**
